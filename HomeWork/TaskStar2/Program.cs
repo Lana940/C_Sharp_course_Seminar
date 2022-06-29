@@ -1,9 +1,8 @@
-﻿int N = int.Parse(Console.WriteLine());
-double A  = double.Parse(Console.WriteLine());
+﻿// Прога на вход принимает значение, а на выходе показывает обратное значение 
 
 
-Console.WriteLine(N = 1 / N);
-Console.WriteLine(A = 1 / A);
+double N = double.Parse(Console.ReadLine());
+
+Console.Write($"{N} -> {1/N}");  //-$ - делает красиво, прямо указать какое число зашло и его обратное состояние 
 
 
-// не разобралась с дробью, как вывести дроби в ответе в консоли
