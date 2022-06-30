@@ -22,7 +22,7 @@
 void Weekend(int num)
 {
     string text = "no";
-    if (num == 7 || num == 6) text = "yes";
+    if (num == 7 || num == 6) text = "yes"; //  || - или то или другое 
     Console.WriteLine($"{num} -> {text}");
 
 }
