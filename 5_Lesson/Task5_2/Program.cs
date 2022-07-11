@@ -44,4 +44,3 @@ int[] arr_1 = MassNums(12);
 Print(arr_1);
 FindNumber(arr_1, 4);
 
-
