@@ -1,7 +1,9 @@
-﻿// Задача 1: Напишите программу замена элементов массива:
-// положительные элементы замените на соответствующие
-// отрицательные, и наоборот.
-// [-4, -8, 8, 2] -> [4, 8, -8, -2] 
+﻿// : Задайте массив. Напишите программу, которая
+// определяет, присутствует ли заданное число в массиве.
+// 4; массив [6, 7, 19, 345, 3] -> нет
+// 3; массив [6, 7, 19, 345, 3] -> да
+
+
 
 void Print(int[] arr)
 {
@@ -24,18 +26,22 @@ int[] MassNums(int size)    //лучше размерность передава
     return arr;
 }
 
-void PlusMinusChange(int[] arr)
+void FindNumber(int[] arr, int number)
 {
+    string flag = "No";
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] > 0) arr[i] = arr[i] * -1;
-        else arr[i] = arr[i] * -1;
+        if (number == arr[i])
+        {
+            flag = "Yes";
+            break;
+        }
     }
-    Console.WriteLine();
+    Console.WriteLine($"{number}, {flag}");
 }
 
 int[] arr_1 = MassNums(12);
 Print(arr_1);
-PlusMinusChange(arr_1);
+FindNumber(arr_1, 4);
 
-Print(arr_1);
+
