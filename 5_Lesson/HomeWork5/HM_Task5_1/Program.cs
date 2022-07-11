@@ -32,7 +32,7 @@ int EvenNumbersAmount(int[] arr)
         {
             amount += 1;
         }
-        
+
     }
     return amount;
 
