@@ -17,9 +17,11 @@ double[] MassNums(int size)
 {
 
     double[] arr = new double[size];
+    Random n_new = new Random ();  // создали обьект класса рендом
+
     for (int i = 0; i < size; i++)
     {
-        arr[i] = new Random().NextDouble();
+        arr[i] = Math.Round(n_new.NextDouble() * (10), 2); //math.round ....2 округляет до 2 цифр после , 10 - диапазон, можно менять
     }
     return arr;
 }
@@ -41,7 +43,7 @@ void MaxMinDifference(double[] arr)
        }
     }
     Console.WriteLine($"Min {min_1}, Max {max_1} ");
-    Console.WriteLine($"Difference {max_1} - {min_1} -> {max_1 - min_1} ");
+    Console.WriteLine($"Difference {max_1} - {min_1} = {Math.Round(max_1 - min_1, 2)}");
 
 }
 

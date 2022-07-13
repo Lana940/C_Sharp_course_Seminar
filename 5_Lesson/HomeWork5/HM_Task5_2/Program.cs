@@ -12,13 +12,13 @@ void Print(int[] arr)
     Console.WriteLine();
 }
 
-int[] MassNums(int size)
+int[] MassNums(int size, int from, int to)
 {
 
     int[] arr = new int[size];
     for (int i = 0; i < size; i++)
     {
-        arr[i] = new Random().Next(1, 100);
+        arr[i] = new Random().Next(from, to);
     }
     return arr;
 }
@@ -37,7 +37,7 @@ int OddPosAmount(int[] arr)
 }
 
 
-int[] arr_1 = MassNums(10);
+int[] arr_1 = MassNums(10, -3, 15);
 Print(arr_1);
 
 Console.WriteLine(OddPosAmount(arr_1));

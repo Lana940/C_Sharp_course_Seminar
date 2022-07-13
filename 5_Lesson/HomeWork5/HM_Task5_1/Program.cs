@@ -11,13 +11,13 @@ void Print(int[] arr)
     Console.WriteLine();
 }
 
-int[] MassNums(int size)
+int[] MassNums(int size, int from, int to)
 {
 
     int[] arr = new int[size];
     for (int i = 0; i < size; i++)
     {
-        arr[i] = new Random().Next(99, 1000);
+        arr[i] = new Random().Next(from, to);
     }
     return arr;
 }
@@ -39,7 +39,7 @@ int EvenNumbersAmount(int[] arr)
 }
 
 
-int[] arr_1 = MassNums(5);
+int[] arr_1 = MassNums(15, 100, 1000);
 Print(arr_1);
 
 Console.WriteLine(EvenNumbersAmount(arr_1));
