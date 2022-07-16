@@ -8,7 +8,7 @@
 void FindIntersection(double b1, double b2, double k1, double k2)
 
 {
-    double x =  (b1 - b2) /  ( k2 - k1); 
+    double x =  (b2 - b1) /( k1 - k2); // k1*x + b1 = k2*x + b2  -> x(k1 -k2) = b2 -b1 -> x = (b2 - b1) / (k1 -k2)
     double y = k1*x + b1;
     
 
