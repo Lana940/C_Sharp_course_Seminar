@@ -1,11 +1,8 @@
-﻿// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
-
+﻿// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце
 // Например, задан массив:
 // 1 4 7 2
-// 5 9 2 3
+// 5 9 2 3             // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 // 8 4 2 4
-// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
-
 void Print(int[,] arr)
 {
     int row_size = arr.GetLength(0);
@@ -35,7 +32,7 @@ int[,] FillArray(int row, int column, int from, int to)
     return arr;
 }
 
-void [,] AverageSum(int[,] arr)
+void AverageSum(int[,] arr)
 {
     int row = arr.GetLength(0);
     int column = arr.GetLength(1);
@@ -43,16 +40,11 @@ void [,] AverageSum(int[,] arr)
 
     for (int i = 0; i < column; i++)
     {
-        sumColumns = 0;
-        for (int j = 0; j < row; j++)
-        {
-            sumColumns += arr[i, j];
-            Console.Write($"Math.Round(sumColumns / row, 2)};  "); sumColumns += arr[i, j];
-
-
-        }
+        sumColumns = 0; // для обнуления после 1 столбца и счета на новый столбец 
+        for (int j = 0; j < row; j++)  sumColumns += arr[j, i];
+ 
+        Console.Write($"{Math.Round(sumColumns / row, 2)};  ");    
     }
-
 }
 
 Console.Write("Enter the number of rows: ");
@@ -60,7 +52,11 @@ int row = int.Parse(Console.ReadLine());
 Console.Write("Enter the number of columns: ");
 int column = int.Parse(Console.ReadLine());
 
-int[,] arr_1 = FillArray(row, column, 3, 11);
+int[,] arr_1 = FillArray(row, column, 1, 6);
 Print(arr_1);
-Console.WriteLine(AverageSum(arr_1));
+
+AverageSum(arr_1);
+
+
+
 
