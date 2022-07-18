@@ -35,24 +35,24 @@ int[,] FillArray(int row, int column, int from, int to)
     return arr;
 }
 
-int[,] AverageSum(int[,] arr)
+void [,] AverageSum(int[,] arr)
 {
     int row = arr.GetLength(0);
     int column = arr.GetLength(1);
-    int sumColumns = 0;
+    double sumColumns;
 
-
-
-    for (int i = 0; i < row; i ++)
+    for (int i = 0; i < column; i++)
     {
-        for (int j = 0; j < column; j++)
+        sumColumns = 0;
+        for (int j = 0; j < row; j++)
         {
-            sumColumns += arr [i, j];
-            sumColumns = sumColumns/row;
-            
-        }    
-    }    return sumColumns;
-   
+            sumColumns += arr[i, j];
+            Console.Write($"Math.Round(sumColumns / row, 2)};  "); sumColumns += arr[i, j];
+
+
+        }
+    }
+
 }
 
 Console.Write("Enter the number of rows: ");
