@@ -47,30 +47,31 @@ int[,] FillArray(int row, int column, int from, int to)
     return arr;
 }
 
-string TransponMatrix(int [,] arr)
+int[] Vocabulary(int[,] arr)
 {
-    int row = arr.GetLength(0);
-    int column = arr.GetLength(1);
-    if(row != column) return "no";
-
-    for (int i = 0; i < row; i++)
-    {
-       for (int j = 0; j < i; j++)
-       {
-         (arr[i, j], arr[j, i]) = (arr[j, i], arr[i, j]);
-       }
-    }
-    return "yes";
+    int[] array = new int[10];
+    foreach (int item in arr) array[item]++;
+    return array;
 }
 
-Console.Write("Enter the number of rows: ");
+void PrintArray(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+      
+        Console.Write($"{i} - {arr[i]} ");
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+Console.WriteLine("Введите количество строк: ");
 int row = int.Parse(Console.ReadLine());
 
-Console.Write("Enter the number of columns: ");
+Console.WriteLine("Введите количество столбцов: ");
 int column = int.Parse(Console.ReadLine());
 
-int[,] arr_1 = FillArray(row, column, 3, 11);
+int[,] arr_1 = FillArray(row, column, 1, 10);
 Print(arr_1);
-
-Console.WriteLine(TransponMatrix(arr_1));
-Print(arr_1);
+int[] array_1 = Vocabulary(arr_1);
+PrintArray(array_1);
