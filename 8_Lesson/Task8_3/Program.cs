@@ -50,7 +50,7 @@ int[,] FillArray(int row, int column, int from, int to)
 int[] Vocabulary(int[,] arr)
 {
     int[] array = new int[10];
-    foreach (int item in arr) array[item]++;
+    foreach (int item in arr) array[item]++; // бегает по каждому елементу и считает кол-во
     return array;
 }
 

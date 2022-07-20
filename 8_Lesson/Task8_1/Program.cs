@@ -37,9 +37,9 @@ void ReplaceRows(int [,] arr)
     int row = arr.GetLength(0);
     int column = arr.GetLength(1);
 
-    for (int i = 0; i < column; i++)
+    for (int i = 0; i < column; i++) // <column tk perebiraem kajdiy perviy element stolbca
     {
-        (arr[0,i], arr[row - 1, i]) = (arr[row - 1, i], arr[0,i]);
+        (arr[0,i], arr[row - 1, i]) = (arr[row - 1, i], arr[0,i]); //способ кортежей
     }
 }
 
