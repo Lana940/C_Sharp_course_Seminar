@@ -48,6 +48,10 @@ void RowWithMinSum(int[,] arr)
             for (int j = 0; j < column; j++) sumOfRow += arr[i, j];
             if (sumOfRow < minSum)
             {
+                if (minSum == sumOfRow)
+                {
+                    Console.WriteLine($"Row {rowCount} with min sum {minSum}" );
+                }
                  minSum = sumOfRow;
                  rowCount ++;
             }   
@@ -63,7 +67,7 @@ int row = int.Parse(Console.ReadLine());
 Console.Write("Enter the number of columns: ");
 int column = int.Parse(Console.ReadLine());
 
-int[,] arr_1 = FillArray(row, column, 1, 10);
+int[,] arr_1 = FillArray(row, column, 1, 7);
 Print(arr_1);
 
 RowWithMinSum(arr_1);
