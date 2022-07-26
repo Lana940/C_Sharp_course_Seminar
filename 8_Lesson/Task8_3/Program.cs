@@ -50,7 +50,11 @@ int[,] FillArray(int row, int column, int from, int to)
 int[] Vocabulary(int[,] arr)
 {
     int[] array = new int[10];
+<<<<<<< HEAD
     foreach (int item in arr) array[item]++;
+=======
+    foreach (int item in arr) array[item]++; // бегает по каждому елементу и считает кол-во
+>>>>>>> 8_Lesson
     return array;
 }
 
@@ -74,4 +78,9 @@ int column = int.Parse(Console.ReadLine());
 int[,] arr_1 = FillArray(row, column, 1, 10);
 Print(arr_1);
 int[] array_1 = Vocabulary(arr_1);
+<<<<<<< HEAD
 PrintArray(array_1);
+=======
+PrintArray(array_1);
+
+>>>>>>> 8_Lesson
