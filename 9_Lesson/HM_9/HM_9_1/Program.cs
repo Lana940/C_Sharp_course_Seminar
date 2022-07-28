@@ -17,3 +17,10 @@ Console.WriteLine();
 EvenSequence(2, 10);
 Console.WriteLine();
 EvenSequence(1, 5);
+
+// void EvenSequence(int M, int N)   - работает если задать изначально четные М и N
+// {
+//     if (N < M) return;
+//     if (M % 2 != 0) M++;
+//     EvenSequence(M, N -2);
+//     Console.Write($"{N},  ");
